@@ -7,4 +7,4 @@ while i<=n:
     next=a+b
     a=b
     b=next
-    i+=1
+    i=i+1
