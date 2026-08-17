@@ -1,0 +1,17 @@
+name: Notify profile repo of new commit
+
+on:
+  push:
+    branches: ["**"]   # any branch, any commit
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping profile repo to regenerate snake
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.PROFILE_REPO_TOKEN }}" \
+            https://api.github.com/repos/chriswilson-dev/chriswilson-dev/dispatches \
+            -d '{"event_type":"contribution-made"}'
