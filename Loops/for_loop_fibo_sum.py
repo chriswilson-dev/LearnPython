@@ -4,6 +4,5 @@ a=0
 b=1
 for i in range(0,n):
     sum+=a
-    a=b
-    b=a+b  # ✓ CHANGE THIS LINE!
+    a,b=b,a+b  # ✓ Swap and calculate in one line!
 print(sum)

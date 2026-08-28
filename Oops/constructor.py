@@ -9,3 +9,6 @@ class Student():
 # Python essentially makes the current object available to 
 # __init__() through self.
 s1=Student()
+#self is not a pre-defined keyword
+#It is a conventional parameter name used to 
+# refer to the current instance.

@@ -1,3 +1,13 @@
+# n=int(input("Enter no of terms:"))
+# a=0
+# b=1
+# for i in range(0,n,+1):
+#         print (a)
+#         next=a+b
+#         a=b
+#         b=next
+
+
 # ========== VERSION 1: Using temp variable (Easiest to understand) ==========
 print("VERSION 1: Using temp variable")
 n = int(input("How many Fibonacci numbers? "))
