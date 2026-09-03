@@ -7,12 +7,13 @@
 #     sum+=i
 # print(f"Sum of numbers = {sum}")
 
-print("Enter names of 5 people (space separated): ")
-names_list = input().split(' ')
-name = input("Enter name to search: ")
-for i in names_list:
-    if i == name:
-        print(f"{name} found")
+print("Enter names of 5 people (comma separated): ") #list we have
+n=list(input().split(','))
+print("Enter name to be searched: ")
+name=input() #whom we are searching for
+for i in n:
+    if name==i:
+        print("name found")
         break
 else:
-    print(f"{name} not found")
+    print("name not found")
