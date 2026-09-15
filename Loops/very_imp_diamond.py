@@ -1,4 +1,3 @@
-n = int(input("Enter n: "))
 # for i in range(1, n + 1):
 #     if i<=(n+1)/2:
 #         stars = i
@@ -8,12 +7,33 @@ n = int(input("Enter n: "))
 #         print("*", end="")
 #     print()
 
-middle = n // 2
-for i in range(n):
-    spaces = abs(middle - i)
-    stars = n - (2 * spaces)
-    for j in range(spaces):
+n = int(input("Enter n: "))
+
+print(f"Diamond pattern of size {n}:\n")
+
+# Calculate middle row
+middle = (n + 1) / 2.0                # Line 1: Middle position
+
+# Outer loop: n rows (YOUR LOGIC!)
+for i in range(1, n + 1):             # Line 2: For each row
+    
+    # Calculate distance from middle
+    distance = abs(i - middle)        # Line 3: How far from middle?
+    
+    # Calculate number of stars
+    stars_count = 2 * int(middle - distance) - 1  # Line 4: Stars formula
+    
+    # Calculate number of spaces
+    spaces_count = (n - stars_count) // 2  # Line 5: Center alignment
+    
+    # Print spaces
+    for j in range(spaces_count):     # Line 6: Inner loop 1
         print(" ", end="")
-    for j in range(stars):
+    
+    # Print stars
+    for k in range(stars_count):      # Line 7: Inner loop 2
         print("*", end="")
-    print()
+    
+    print()                            # Line 8: Newline
+
+print()
